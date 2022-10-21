@@ -30,9 +30,9 @@ console.log(numero_mayor(numeros));
 //   const palabra_invertida = palabra.split('').reverse().join('');
   
 //   if (palabra === palabra_invertida) {
-//     return 'La palabra "' + string + '", es un palídromo';
+//    return `La palabra "${string}" => "${palabra_invertida}" es un palídromo`;
 //   } else {
-//     return 'La palabra "' + string + '", no es un palídromo';
+//     return `La palabra "${string}" => "${palabra_invertida}", no es un palídromo.`;
 //   }
 // }
 // console.log(palidromo('Apa'));
