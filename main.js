@@ -10,6 +10,7 @@ function numero_mayor (num) {
   mayor = num[0]
 
   for (let i = 0; i < num.length; i++) {
+    
     if (num[i] > mayor) {
       mayor = num[i];
     }
@@ -29,9 +30,9 @@ console.log(numero_mayor(numeros));
 //   const palabra_invertida = palabra.split('').reverse().join('');
   
 //   if (palabra === palabra_invertida) {
-//     return 'La palabra "' + palabra + '", es un palídromo';
+//     return 'La palabra "' + string + '", es un palídromo';
 //   } else {
-//     return 'La palabra "' + palabra + '", no es un palídromo';
+//     return 'La palabra "' + string + '", no es un palídromo';
 //   }
 // }
 // console.log(palidromo('Apa'));
@@ -49,7 +50,6 @@ console.log(numero_mayor(numeros));
 //     for (let j = 0; j < num.length; j++) {
 //       if (num[i][j] === 0) ceros_encontrados++;
 //     }
-
 //   }
 //   return ceros_encontrados;
 // }
