@@ -3,31 +3,34 @@
 
 // const numeros = [1, 4, 15.5, -3, 7, -1, 15];
 
-const numeros = [-2, -3, -1.5, -4];
+// const numeros = [-2, -3, -1.5, -4];
 
-function numero_mayor (num) {
-  let mayor = 0;
-  mayor = num[0]
+// function numero_mayor (num) {
+//   let mayor = 0;
+//   mayor = num[0]
 
-  for (let i = 0; i < num.length; i++) {
+//   for (let i = 0; i < num.length; i++) {
     
-    if (num[i] > mayor) {
-      mayor = num[i];
-    }
-  }
-  return mayor
-}
-console.log(numero_mayor(numeros));
+//     if (num[i] > mayor) {
+//       mayor = num[i];
+//     }
+//   }
+//   return mayor
+// }
+// console.log(numero_mayor(numeros));
 
 
 
 // ------------------ Ejercicio 2 ------------------
-// let x = '';
 
 // function palidromo(string) {
+//   let palabra_invertida = '', x = '', arreglo = [];
 //   x = string;
 //   const palabra = x.toLowerCase();
-//   const palabra_invertida = palabra.split('').reverse().join('');
+
+//   for (let i = palabra.length - 1; i >= 0; i--) { 
+//     palabra_invertida += arreglo[i] = palabra[i];
+//   }
   
 //   if (palabra === palabra_invertida) {
 //    return `La palabra "${string}" => "${palabra_invertida}" es un palídromo`;
