@@ -1,71 +1,110 @@
-// -------------- Ejercicio 1 --------------
+const container = document.getElementById('mainContainer')
+const { data } = {
+  "data": [
+    {
+      "id": 7,
+      "email": "michael.lawson@reqres.in",
+      "age": 30,
+      "userAccount": "Premium",
+      "first_name": "Michael",
+      "last_name": "Lawson",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": 8,
+      "email": "lindsay.ferguson@reqres.in",
+      "age": 78,
+      "userAccount": "Basic",
+      "first_name": "Lindsay",
+      "last_name": "Ferguson",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": 9,
+      "email": "tobias.funke@reqres.in",
+      "age": 23,
+      "userAccount": "Basic",
+      "first_name": "Tobias",
+      "last_name": "Funke",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": 10,
+      "email": "byron.fields@reqres.in",
+      "age": 86,
+      "userAccount": "Basic",
+      "first_name": "Byron",
+      "last_name": "Fields",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": 11,
+      "email": "george.edwards@reqres.in",
+      "age": 30,
+      "userAccount": "Premium",
+      "first_name": "George",
+      "last_name": "Edwards",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": 12,
+      "email": "rachel.howell@reqres.in",
+      "age": 67,
+      "userAccount": "Premium",
+      "first_name": "Rachel",
+      "last_name": "Howell",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": 13,
+      "email": "adrian.bell@reqres.in",
+      "age": 54,
+      "userAccount": "Basic",
+      "first_name": "Adrian",
+      "last_name": "Bell",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": 14,
+      "email": "adrian.bell@reqres.in",
+      "age": 54,
+      "userAccount": "",
+      "first_name": "Adrian",
+      "last_name": "Bell",
+      "description": "Lorem ipsum"
+    }
+  ]
+}
 
-// const string = 'freeCodeCamp'
-// let palabra = '';
+// Utilizando el siguiente objeto de usuarios, crear un programa que muestre en el browser la información de cada usuario, de manera que imprima una lista de elementos div, con los siguientes elementos:
+// * h2 --> Id
+// * h3 --> firstName y lastName
+// * h4 --> userAccount
+// * p --> email
+// * p --> description
 
-// const revertir_string = (value) => {
-//   console.log(i);
-//   if (value < 0) return;
-//   palabra += string[value];
+// ** Importante todos los elementos (div) de tipo usuario deben estar dentro de un div mainContainer
 
-//   return revertir_string(value - 1);
-// }
 
-// revertir_string(string.length - 1);
-// console.log(palabra);
+const imprimir_usuarios = (lista_usuarios) => {
 
-// -------------- Ejercicio 2 --------------
+  const usuarios = lista_usuarios.map((item) => {
+    return `
+    <h2>Id: ${item.id}</h2>
+    <h3>First name: ${item.first_name}</h3>
+    <h3>last name: ${item.last_name}</h3>
+    <h4>User Account: ${item.userAccount}</h4>
+    <p>Email: ${item.email}</p>
+    <p>Age: ${item.age}</p>
+    <p>Description: ${item.description}</p>
+  `
+  })
 
-// let contador = 0, bandera = 0;
-// let palabra = 'construccion', letra = 'c';
+  container.innerHTML = usuarios;
+}
 
-// const recorrer = (n, str, l) => {
-//   if (n > str.length - 1) return;
-  
-//   if (l === str[n]){
-//     contador++;
-//     bandera = 1;
-//   }
-
-//   return recorrer(n + 1, str, l), str, l;
-// }
-
-// recorrer(0, palabra, letra)
-
-// if (bandera === 1) {
-//   console.log(`En la palabra ${palabra} aparece la letra '${letra}' ${contador} veces.`);
-// } else {
-//   console.log(`En la palabra ${palabra} no se encuentra la letra '${letra}'`);
-// }
+imprimir_usuarios(data)
 
 
 
-// -------------- Ejercicio 3 --------------
 
-// const vocales = 'aeiou',
-//       palabra = 'esta es la entrada';
-
-// let nueva_palabra = '';
-
-
-// let arr = [], repetidos = [], contador = -1;
-// const recorrer = (n,vcl, str) => {
-//   if (n >= str.length ) return;
-//   contador++;
-//   arr[contador] = str[contador]
-  
-//   let i = 0;
-//   do {
-//     if(vcl[n] === str[i]) {
-//       repetidos[contador] = st[i]
-//     }
-//     i++
-//   } while(i < str.length)
-  
-//   if (arr.length === palabra.length) {
-//     console.log(arr);
-//     return;
-//   }
-//   return recorrer(n + 1,vcl, str );
-// }
-// recorrer(0,vocales, palabra)
